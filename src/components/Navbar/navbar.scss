@@ -1,0 +1,28 @@
+
+.navbar{
+  height: 10vh;
+  border-bottom: 3px solid white;
+  //z-index: 100;
+  .wrapper{
+    max-width: 58vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // background-color: crimson;
+    height: 100%;
+    span{
+      font-weight: bold;
+    }
+
+    .social{
+      display: flex;
+      gap: 1vw;
+      img {
+        width: 2vw;
+        height: 2vw;
+      }
+    }
+  }
+
+}

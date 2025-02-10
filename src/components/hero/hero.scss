@@ -1,0 +1,76 @@
+.hero{
+  height: 90vh;
+  overflow: hidden;
+  background: linear-gradient(180 deg, #0c0c1d, #111132);
+  position: relative;
+  flex-wrap: wrap;//Will see about this later
+  z-index: 1;
+  .wrapper{
+    max-width: 58vw;
+    height: 100%;
+    margin: auto;
+    z-index: 10;
+    .textContainer{
+      height: 100%;
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+      
+      h2{
+        font-size: 4vh;
+        color: rebeccapurple;
+        letter-spacing: 10px;
+      }
+      h1{
+        font-size: 7vh;
+        //line-height: 8vh; I was using this in case we use break tag 
+      }
+      .buttons{
+        display: flex;
+        gap: 20px;
+        z-index: 10; //giving z-index because the slidingContainer was causing the hiding of the buttons(cursor wasn't changing to pointer) 
+        button{
+          padding: 20px;
+          border: 1px solid white;
+          border-radius: 10px;
+          background-color: transparent;
+          color: white;
+          font-weight: 300;
+          cursor: pointer;
+        }
+      }
+      img{
+        width: 50px;
+      }
+    }
+  }
+  .imageContainer{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+
+    img{
+      margin-top: 15%;
+      margin-left: -8%;
+      border-radius: 10%;
+      height: 70vh;
+      width: 35vw;
+      border: 5px solid white;
+      object-fit: cover;
+    }
+  }
+  .slidingTextContainer{
+    position: absolute;
+    font-size: 50vh;
+    bottom: -120px;
+    white-space: nowrap; //Because I want the text in one line
+    color: #ffffff14;
+    width: 50%;
+    font-weight: bold;
+    z-index: 0;
+  }
+}
